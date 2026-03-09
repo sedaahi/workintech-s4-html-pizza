@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Quattrocento:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workintech + 🍕</title>
   </head>
 
   <body>
     <div id="app">
-      <div>
-        <a href="https://github.com/Workintech/fsweb-s5-bonus-challenge-html-pizza" target="_blank">
-          <img src="./workintech.svg" class="logo" alt="Workintech logo">
-        </a>
-        <h1>Hello Coder!</h1>
-        <p class="read-the-docs">
-          Click on the Workintech logo to see the Readme of the project
-        </p>
-      </div>
+      <!--HERO SECTION-->
+      <header class="hero">
+        <div class="hero__overlay">
+          <div class="container hero__content">
+            <img
+              class="hero__logo"
+              src="./assets/iteration-1/logo.svg"
+              alt="Teknolojik Yemekler"
+            />
+
+            <p class="hero__tagline">fırsatı kaçırma</p>
+
+            <h1 class="hero__title">
+              KOD ACIKTIRIR <br />
+              PIZZA, DOYURUR
+            </h1>
+
+            <a href="#" class="hero__button">ACIKTIM</a>
+          </div>
+        </div>
+      </header>
+<!--CATEGORIES SECTION-->
+<section class="categories">
+  <div class="container">
+    <nav class="categories__nav" aria-label="Yemek kategorileri">
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/1.svg" alt="" aria-hidden="true" />
+        <span>YENİ! Kore</span>
+      </a>
+
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/2.svg" alt="" aria-hidden="true" />
+        <span>Pizza</span>
+      </a>
+
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/3.svg" alt="" aria-hidden="true" />
+        <span>Burger</span>
+      </a>
+
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/4.svg" alt="" aria-hidden="true" />
+        <span>Kızartmalar</span>
+      </a>
+
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/5.svg" alt="" aria-hidden="true" />
+        <span>Fast food</span>
+      </a>
+
+      <a href="#" class="categories__item">
+        <img src="./assets/iteration-2/icons/6.svg" alt="" aria-hidden="true" />
+        <span>Gazlı içecek</span>
+      </a>
+    </nav>
+  </div>
+</section>
     </div>
   </body>
-
 </html>
