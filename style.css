@@ -22,8 +22,6 @@ a {
 
 button {
   border: 0;
-  background: none;
-  font: inherit;
   cursor: pointer;
 }
 
@@ -32,7 +30,10 @@ ul {
 }
 
 .container {
-  width: min(100% - 48px, 1068px);
+  width: 100%;
+  max-width: 1068px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin: 0 auto;
 }
 
@@ -40,13 +41,16 @@ ul {
 
 .hero {
   min-height: 1080px;
-  background: #ce2829 url("./assets/iteration-1/home-banner.png") center top /
-    cover no-repeat;
+  background-color: #ce2829;
+  background-image: url("./assets/iteration-1/home-banner.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-inner {
   text-align: center;
-  padding-top: 28px;
+  padding-top: 60px;
 }
 
 .hero-logo {
@@ -77,7 +81,7 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
+  border-radius: 100px;
   font-size: 18px;
   font-weight: 600;
 }
@@ -120,13 +124,11 @@ ul {
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
-  white-space: nowrap;
 }
 
 .cat-item img {
   width: 28px;
   height: 28px;
-  object-fit: contain;
 }
 
 /* PROMO */
@@ -136,8 +138,8 @@ ul {
 }
 
 .promo-grid {
-  display: grid;
-  grid-template-columns: 531px 530px;
+  display: grid; /* iki sütuna bölmek için */
+  grid-template-columns: 531px 530px; /* kaç sütun olacağını ve genişliklerini belirlemek için */
   justify-content: center;
   gap: 11px;
 }
@@ -150,15 +152,9 @@ ul {
 
 .card {
   border-radius: 12px;
-  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.card-text {
-  position: relative;
-  z-index: 1;
 }
 
 .card-red {
@@ -186,7 +182,7 @@ ul {
 }
 
 .card-red .card-text {
-  max-width: 235px;
+  max-width: 255px;
 }
 
 .card-dark .card-text {
@@ -254,8 +250,7 @@ ul {
 .pills {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 12px;
 }
 
@@ -291,7 +286,7 @@ ul {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 334px);
+  grid-template-columns: repeat(3, 334px); /* sütunların sayısını ve genişliğini belirler  334 + 334 + 334 = 1002px+gap(64) => container genişliği*/
   justify-content: center;
   gap: 32px;
 }
@@ -338,21 +333,34 @@ ul {
 /* FOOTER */
 
 .footer {
-  margin-top: 48px;
-  background: #1a1a1a;
-  color: #fff;
+  margin-top: 36px;
+  background-color: #1c1c1c;
+  color: #ffffff;
 }
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr;
-  gap: 70px;
-  padding: 72px 0 58px;
+  grid-template-columns: 320px 260px 340px;
+  justify-content: space-between;
+  align-items: start;
+  padding: 72px 0 56px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  width: 220px;
-  margin-bottom: 32px;
+  width: 190px;
+  margin-bottom: 50px;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 28px 0;
 }
 
 .contact {
@@ -360,54 +368,64 @@ ul {
   align-items: flex-start;
   gap: 14px;
   margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .contact img {
   width: 18px;
-  height: 18px;
-  margin-top: 2px;
+  margin-top: 4px;
+  flex-shrink: 0;
 }
 
-.footer-title {
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 26px;
+.contact span {
+  display: inline-block;
+}
+
+.footer-list {
+  padding: 0;
+  margin: 0;
 }
 
 .footer-list li {
-  font-size: 16px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 2.2;
+  margin: 0;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
+  width: 340px;
 }
 
 .gallery img {
+  display: block;
   width: 100%;
-  border-radius: 4px;
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-bottom-row {
-  min-height: 89px;
+  min-height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 16px;
+}
+
+.footer-bottom-row img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 /* MOBILE */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .container {
     width: min(100% - 36px, 422px);
   }
